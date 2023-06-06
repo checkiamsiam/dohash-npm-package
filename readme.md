@@ -13,6 +13,11 @@ To install the dohash package, use npm:
 ```javascript
 npm install dohash
 ```
+or
+
+```javascript
+npm install @checkiamsiam/dohash
+```
 
 ## Usage
 
