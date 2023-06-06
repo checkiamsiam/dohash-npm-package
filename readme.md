@@ -27,8 +27,7 @@ Import the functions from the package into your project:
 const { doHash, decode, check } = require("dohash");
 ```
 
-`doHash(str, secret)`
-Hashes and encodes a given string using a secret key.
+### `doHash(str, secret)` Hashes and encodes a given string using a secret key.
 
 Parameters:
 
@@ -36,16 +35,14 @@ Parameters:
 - `secret`: The secret key used for hashing.
 - `Returns`: The hashed and encoded string.
 
-`decode(hashed)`
-Decodes a previously hashed and encoded string.
+### `decode(hashed)` Decodes a previously hashed and encoded string.
 
 Parameters:
 
 - `hashed`: The hashed string to be decoded.
   Returns: The decoded string.
 
-`check(originalStr, hashed)`
-Checks if a given original string matches a hashed and encoded string.
+### `check(originalStr, hashed)` Checks if a given original string matches a hashed and encoded string.
 
 Parameters:
 
