@@ -8,35 +8,36 @@ dohash is a lightweight npm package that provides a simple way to hash and encod
 
 To install the dohash package, use npm:
 
+```javascript
 npm install dohash
-
-csharp
-Copy code
+```
 
 ## Usage
 
 Import the functions from the package into your project:
 
 ```javascript
-const { doHash, decode, check } = require('dohash');
-doHash(str, secret)
+const { doHash, decode, check } = require("dohash");
+```
+
+`doHash(str, secret)`
 Hashes and encodes a given string using a secret key.
 
 Parameters:
 
-str: The string to be hashed.
-secret: The secret key used for hashing.
-Returns: The hashed and encoded string.
+- `str`: The string to be hashed.
+- `secret`: The secret key used for hashing.
+- `Returns`: The hashed and encoded string.
 
-decode(hashed)
+`decode(hashed)`
 Decodes a previously hashed and encoded string.
 
 Parameters:
 
-hashed: The hashed string to be decoded.
-Returns: The decoded string.
+- `hashed`: The hashed string to be decoded.
+  Returns: The decoded string.
 
-check(originalStr, hashed)
+`check(originalStr, hashed)`
 Checks if a given original string matches a hashed and encoded string.
 
 Parameters:
@@ -48,24 +49,26 @@ Returns: true if the original string matches the hashed string, false otherwise.
 Examples
 Here are some examples to demonstrate the usage of dohash:
 
-javascript
-Copy code
-const { doHash, decode, check } = require('dohash');
+```javascript
+const { doHash, decode, check } = require("dohash");
 
-const originalString = 'Hello, world!';
-const secretKey = 'mySecretKey';
+const originalString = "Hello, world!";
+const secretKey = "mySecretKey";
 
 const hashedString = doHash(originalString, secretKey);
-console.log('Hashed string:', hashedString);
+console.log("Hashed string:", hashedString);
 
 const decodedString = decode(hashedString);
-console.log('Decoded string:', decodedString);
+console.log("Decoded string:", decodedString);
 
 const isMatch = check(originalString, hashedString);
-console.log('Match:', isMatch);
-Contributing
+console.log("Match:", isMatch);
+```
+
+# Contributing
+
 Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request on the GitHub repository.
 
-License
-This project is licensed under the MIT License.
-```
+# License
+
+This project is licensed under the ISC License.
