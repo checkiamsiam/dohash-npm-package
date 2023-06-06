@@ -1,0 +1,22 @@
+{
+  "name": "dohash",
+  "version": "1.0.0",
+  "description": "this is a simple package that do hashing data for you.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/checkiamsiam/dohash-npm-package.git"
+  },
+  "keywords": [
+    "dohash"
+  ],
+  "author": "checkiamsiam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/checkiamsiam/dohash-npm-package/issues"
+  },
+  "homepage": "https://github.com/checkiamsiam/dohash-npm-package#readme"
+}
