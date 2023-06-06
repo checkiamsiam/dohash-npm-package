@@ -57,4 +57,5 @@ const check = (originalStr, hashed) => {
 module.exports = {
   doHash,
   check,
+  decode,
 };
