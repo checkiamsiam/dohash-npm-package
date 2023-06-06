@@ -11,7 +11,7 @@
     "url": "git+https://github.com/checkiamsiam/dohash-npm-package.git"
   },
   "keywords": [
-    "dohash"
+    "hashing" , "hash" , "data" , "data hashing" , "data hash", "encrypt" , "encryption","dohash" , "checkiamsiam"
   ],
   "author": "checkiamsiam",
   "license": "ISC",
