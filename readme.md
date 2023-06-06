@@ -46,11 +46,12 @@ Parameters:
 
 Parameters:
 
-originalStr: The original string to be checked.
-hashed: The hashed and encoded string to be compared.
-Returns: true if the original string matches the hashed string, false otherwise.
+- `originalStr`: The original string to be checked.
+- `hashed`: The hashed and encoded string to be compared.
+- `Returns`: true if the original string matches the hashed string, false otherwise.
 
-Examples
+# Examples
+
 Here are some examples to demonstrate the usage of dohash:
 
 ```javascript
