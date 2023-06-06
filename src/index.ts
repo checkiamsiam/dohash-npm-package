@@ -2,7 +2,7 @@ import alphaDecode from "./utils/alphaDecode";
 import alphaEncode from "./utils/alphaEncode";
 import { secretExtra, strExtra } from "./utils/constants";
 
-const doHash = (str: string, secret: string): string => {
+const createHash = (str: string, secret: string): string => {
   const srtEnc: string = alphaEncode(str);
 
   if (srtEnc.length <= secret.length) {
@@ -57,4 +57,8 @@ const checkHash = (originalStr: string, hashed: string): boolean => {
   return originalStr === decodeHash(hashed);
 };
 
-export { doHash, decodeHash, checkHash };
+const doHash = { createHash, decodeHash, checkHash };
+
+export { createHash, decodeHash, checkHash };
+
+export default doHash;

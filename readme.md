@@ -6,28 +6,36 @@ dohash is a lightweight npm package that provides a simple way to hash and encod
 
 <span style="color: yellow;">This package should not be used for hashing sensitive or critical information. It is meant for basic obfuscation and should not be relied upon for strong security requirements.</span>
 
-## Installation
+# Installation
 
 To install the dohash package, use npm:
 
 ```javascript
 npm install dohash
 ```
+
 or
 
 ```javascript
 npm install @checkiamsiam/dohash
 ```
 
-## Usage
+# Usage
 
 Import the functions from the package into your project:
 
 ```javascript
-const { doHash, decode, check } = require("dohash");
+const { createHash, decodeHash, checkHash } = require("dohash");
+```
+or
+```javascript
+const doHash = require("dohash");
+doHash.createHash();
+doHash.decodeHash();
+doHash.checkHash();
 ```
 
-### `doHash(str, secret)` Hashes and encodes a given string using a secret key.
+### `createHash(str, secret)` Hashes and encodes a given string using a secret key.
 
 Parameters:
 
@@ -35,14 +43,14 @@ Parameters:
 - `secret`: The secret key used for hashing.
 - `Returns`: The hashed and encoded string.
 
-### `decode(hashed)` Decodes a previously hashed and encoded string.
+### `decodeHash(hashed)` Decodes a previously hashed and encoded string.
 
 Parameters:
 
 - `hashed`: The hashed string to be decoded.
   Returns: The decoded string.
 
-### `check(originalStr, hashed)` Checks if a given original string matches a hashed and encoded string.
+### `checkHash(originalStr, hashed)` Checks if a given original string matches a hashed and encoded string.
 
 Parameters:
 
@@ -55,18 +63,18 @@ Parameters:
 Here are some examples to demonstrate the usage of dohash:
 
 ```javascript
-const { doHash, decode, check } = require("dohash");
+const { createHash, decodeHash, checkHash } = require("dohash");
 
 const originalString = "Hello, world!";
 const secretKey = "mySecretKey";
 
-const hashedString = doHash(originalString, secretKey);
+const hashedString = createHash(originalString, secretKey);
 console.log("Hashed string:", hashedString);
 
-const decodedString = decode(hashedString);
+const decodedString = decodeHash(hashedString);
 console.log("Decoded string:", decodedString);
 
-const isMatch = check(originalString, hashedString);
+const isMatch = checkHash(originalString, hashedString);
 console.log("Match:", isMatch);
 ```
 

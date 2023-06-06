@@ -3,11 +3,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.checkHash = exports.decodeHash = exports.doHash = void 0;
+exports.checkHash = exports.decodeHash = exports.createHash = void 0;
 const alphaDecode_1 = __importDefault(require("./utils/alphaDecode"));
 const alphaEncode_1 = __importDefault(require("./utils/alphaEncode"));
 const constants_1 = require("./utils/constants");
-const doHash = (str, secret) => {
+const createHash = (str, secret) => {
     const srtEnc = (0, alphaEncode_1.default)(str);
     if (srtEnc.length <= secret.length) {
         let strRes = "";
@@ -32,7 +32,7 @@ const doHash = (str, secret) => {
         return (0, alphaEncode_1.default)(strRes);
     }
 };
-exports.doHash = doHash;
+exports.createHash = createHash;
 const decodeHash = (hashed) => {
     const strDec = (0, alphaDecode_1.default)(hashed);
     if (strDec.includes(constants_1.secretExtra)) {
@@ -62,3 +62,5 @@ const checkHash = (originalStr, hashed) => {
     return originalStr === decodeHash(hashed);
 };
 exports.checkHash = checkHash;
+const doHash = { createHash, decodeHash, checkHash };
+exports.default = doHash;
