@@ -1,10 +1,11 @@
 {
   "name": "dohash",
-  "version": "1.0.6",
+  "version": "1.1.1",
   "description": "this is a simple package that do hashing data for you.",
   "main": "dist/index.js",
+  "exports": "./dist/index.js",
   "files": [
-    "dist/index.js"
+    "dist"
   ],
   "scripts": {
     "build": "tsc",
