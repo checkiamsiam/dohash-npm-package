@@ -1,9 +1,8 @@
 {
   "name": "dohash",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "this is a simple package that do hashing data for you.",
-  "main": "index.js",
-  "exports": "./index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
