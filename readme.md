@@ -2,7 +2,9 @@
 
 dohash is a lightweight npm package that provides a simple way to hash and encode strings for basic data obfuscation. It is not designed for secure hashing or encryption purposes, but rather for adding a layer of string transformation that can be useful when storing data locally or in cookies.
 
-**Caution**: This package should not be used for hashing sensitive or critical information. It is meant for basic obfuscation and should not be relied upon for strong security requirements.
+# **Caution**:
+
+<span style="color: yellow;">This package should not be used for hashing sensitive or critical information. It is meant for basic obfuscation and should not be relied upon for strong security requirements.</span>
 
 ## Installation
 
