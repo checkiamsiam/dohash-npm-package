@@ -1,6 +1,6 @@
 {
   "name": "dohash",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "this is a simple package that do hashing data for you.",
   "main": "dist/index.js",
   "exports": "./dist/index.js",
