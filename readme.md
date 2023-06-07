@@ -2,6 +2,9 @@
 
 dohash is a lightweight npm package that provides a simple way to hash and encode strings for basic data obfuscation. It is not designed for secure hashing or encryption purposes, but rather for adding a layer of string transformation that can be useful when storing data locally or in cookies.
 
+# **Caution**:
+
+There you can hash something with out adding any secret. but it is not recommended becuase anyone can decode it. so if you want to hash something and decode it later you should add a secret key. and when you decode it you should add the same secret key. if you don't add the same secret key you will get an error.
 
 # Installation
 
