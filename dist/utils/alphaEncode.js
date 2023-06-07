@@ -129,7 +129,7 @@ const alphaEncode = (str) => {
             case "9":
                 return "0";
             case " ":
-                return "$";
+                return "и";
             default:
                 return match;
         }

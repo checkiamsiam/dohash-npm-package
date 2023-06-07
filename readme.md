@@ -27,7 +27,9 @@ Import the functions from the package into your project:
 ```javascript
 const { createHash, decodeHash, checkHash } = require("dohash");
 ```
+
 or
+
 ```javascript
 const doHash = require("dohash");
 doHash.createHash();
@@ -40,23 +42,26 @@ doHash.checkHash();
 Parameters:
 
 - `str`: The string to be hashed.
-- `secret`: The secret key used for hashing.
-- `Returns`: The hashed and encoded string.
+- `secret`(optional): The secret key used for hashing. this will make string more secure.
+- `Returns`: The hashed and encoded string. (string)
 
-### `decodeHash(hashed)` Decodes a previously hashed and encoded string.
+### `decodeHash(hashed , secret)` Decodes a previously hashed and encoded string.
 
 Parameters:
 
 - `hashed`: The hashed string to be decoded.
   Returns: The decoded string.
+- `secret`(optional): This will need when you create hash with secret key.
+- `Returns`: error and decoded string. ({decoded : string | null , error : string | null})
 
-### `checkHash(originalStr, hashed)` Checks if a given original string matches a hashed and encoded string.
+### `checkHash(originalStr, hashed , secret)` Checks if a given original string matches a hashed and encoded string.
 
 Parameters:
 
 - `originalStr`: The original string to be checked.
 - `hashed`: The hashed and encoded string to be compared.
-- `Returns`: true if the original string matches the hashed string, false otherwise.
+- `secret`(optional): This will need when you create hash with secret key.
+- `Returns`: true if the original string matches the hashed string, false otherwise. (boolean)
 
 # Examples
 
@@ -71,10 +76,10 @@ const secretKey = "mySecretKey";
 const hashedString = createHash(originalString, secretKey);
 console.log("Hashed string:", hashedString);
 
-const decodedString = decodeHash(hashedString);
-console.log("Decoded string:", decodedString);
+const { decoded, error } = decodeHash(hashedString, secretKey);
+console.log("Decoded string:", decoded);
 
-const isMatch = checkHash(originalString, hashedString);
+const isMatch = checkHash(originalString, hashedString, secretKey);
 console.log("Match:", isMatch);
 ```
 

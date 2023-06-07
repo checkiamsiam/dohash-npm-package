@@ -126,14 +126,14 @@ const alphaDecode = (str: string): string => {
         return "7";
       case "9":
         return "8";
-      case "$":
+      case "и":
         return " ";
       default:
         return match;
     }
   });
   const res: string = revRes.split("").reverse().join("");
-  const decoded: string = res.replace(/[$]/g, " ");
+  const decoded: string = res.replace(/[и]/g, " ");
   return decoded;
 };
 
